@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Coffee Shops to Study in Iowa City - Hawkeye Haven</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
         :root {
-            --primary: #000000;
+            --primary: #121212;
             --accent: #FFCD00;
-            --bg: #F8F9FA;
+            --bg: #FAFAFB;
             --card-bg: #FFFFFF;
-            --text: #212529;
-            --border: #DEE2E6;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.06);
+            --shadow-hover: 0 15px 30px -5px rgba(0,0,0,0.07);
         }
 
         * {
@@ -21,9 +28,9 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
-            color: var(--text);
+            color: var(--text-main);
             background-color: var(--bg);
             display: flex;
             flex-direction: column;
@@ -31,37 +38,46 @@
         }
 
         .disclaimer-banner {
-            background-color: var(--primary);
+            background: linear-gradient(90deg, #000000 0%, #1a1a1a 100%);
             color: var(--accent);
             text-align: center;
-            padding: 10px 15px;
+            padding: 12px 20px;
             font-size: 0.85rem;
             font-weight: 600;
+            letter-spacing: 0.02em;
             border-bottom: 2px solid var(--accent);
         }
 
         header {
-            background-color: var(--primary);
+            background-color: #000000;
             color: #FFFFFF;
-            padding: 20px 15px;
+            padding: 40px 20px 30px;
             text-align: center;
+            background-image: radial-gradient(circle at top, #222222 0%, #000000 70%);
         }
 
         header h1 {
             color: var(--accent);
-            font-size: 1.8rem;
-            margin-bottom: 5px;
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
         }
 
         header p {
-            font-size: 0.95rem;
-            color: #E0E0E0;
+            font-size: 1.05rem;
+            color: #94A3B8;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         nav {
-            background-color: #1A1A1A;
-            border-top: 1px solid #333333;
-            border-bottom: 3px solid var(--accent);
+            background-color: #121212;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         nav ul {
@@ -69,6 +85,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         nav li {
@@ -84,80 +102,147 @@
 
         nav a {
             display: block;
-            padding: 12px 18px;
-            color: #FFFFFF;
+            padding: 16px 22px;
+            color: #CBD5E1;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
-            transition: background 0.2s;
+            font-size: 0.92rem;
+            transition: all 0.2s ease;
+            position: relative;
         }
 
         nav a:hover, nav a.active {
+            color: var(--accent);
+            background-color: rgba(255, 205, 0, 0.05);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
             background-color: var(--accent);
-            color: var(--primary);
         }
 
         main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 15px;
+            max-width: 960px;
+            width: 100%;
+            margin: 35px auto;
+            padding: 0 20px;
             flex: 1;
         }
 
         .intro {
-            background-color: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+            padding: 30px;
+            border-radius: var(--radius-lg);
             border: 1px solid var(--border);
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .intro h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .intro p {
+            color: var(--text-muted);
         }
 
         .cafe-card {
             background-color: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: var(--radius-lg);
             border: 1px solid var(--border);
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cafe-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
         }
 
         .cafe-card h2 {
             color: var(--primary);
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+            font-size: 1.35rem;
+            margin-bottom: 12px;
         }
 
-        .cafe-meta {
-            background-color: var(--bg);
-            padding: 10px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
+        .badge-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #F1F5F9;
+            color: #475569;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.82rem;
             font-weight: 600;
         }
 
-        ul.perks {
-            margin-left: 20px;
-            margin-top: 10px;
+        .badge-highlight {
+            background-color: #FEF3C7;
+            color: #92400E;
+            border: 1px solid #FCD34D;
+        }
+
+        .cafe-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .perks-list {
+            background-color: var(--bg);
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--accent);
+            list-style: none;
+        }
+
+        .perks-list li {
+            font-size: 0.92rem;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .perks-list li:last-child {
+            margin-bottom: 0;
         }
 
         footer {
-            background-color: var(--primary);
-            color: #FFFFFF;
+            background-color: #000000;
+            color: #94A3B8;
             text-align: center;
-            padding: 20px 15px;
-            margin-top: 30px;
+            padding: 35px 20px;
+            margin-top: 50px;
+            border-top: 1px solid #222;
         }
 
         footer p {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
         }
 
         .footer-notice {
             color: var(--accent);
             font-size: 0.85rem;
             font-weight: 600;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -189,31 +274,40 @@
 
         <article class="cafe-card">
             <h2>1. Java House</h2>
-            <div class="cafe-meta">Address: 211 E Washington St | Espresso Specialty: Specialty Lattes & Bakery</div>
+            <div class="badge-container">
+                <span class="badge">📍 211 E Washington St</span>
+                <span class="badge badge-highlight">☕ Specialty Lattes & Bakery</span>
+            </div>
             <p>A classic Iowa City favorite, Java House offers a cozy, nostalgic atmosphere with ample seating, dim lighting, and steady background music. It is ideal for reading literature, typing essays, or meeting up for group discussion.</p>
-            <ul class="perks">
-                <li>Abundant electrical outlets along booth walls</li>
-                <li>Comfortable armchairs and wide wooden tables</li>
+            <ul class="perks-list">
+                <li>✓ Abundant electrical outlets along booth walls</li>
+                <li>✓ Comfortable armchairs and wide wooden tables</li>
             </ul>
         </article>
 
         <article class="cafe-card">
             <h2>2. Cortado Coffee & Cafe</h2>
-            <div class="cafe-meta">Address: 26 S Clinton St | Espresso Specialty: Mediterranean Coffee & Pastries</div>
+            <div class="badge-container">
+                <span class="badge">📍 26 S Clinton St</span>
+                <span class="badge badge-highlight">☕ Mediterranean Coffee & Pastries</span>
+            </div>
             <p>Located directly across from the Pentacrest, Cortado boasts a sleek modern interior with bright white lighting and outdoor seating during warmer months. It is ideal for morning study sessions paired with fresh savory bites.</p>
-            <ul class="perks">
-                <li>Prime location right next to campus buildings</li>
-                <li>Excellent espresso options and healthy lunch items</li>
+            <ul class="perks-list">
+                <li>✓ Prime location right next to campus buildings</li>
+                <li>✓ Excellent espresso options and healthy lunch items</li>
             </ul>
         </article>
 
         <article class="cafe-card">
             <h2>3. Press Coffee</h2>
-            <div class="cafe-meta">Address: 1120 N Dodge St | Espresso Specialty: Pour-Overs & Cold Brew</div>
+            <div class="badge-container">
+                <span class="badge">📍 1120 N Dodge St</span>
+                <span class="badge badge-highlight">☕ Pour-Overs & Cold Brew</span>
+            </div>
             <p>Located slightly north of downtown, Press Coffee offers a relaxed neighborhood vibe with rustic wooden decor and natural lighting. It is a peaceful escape from busy campus corridors.</p>
-            <ul class="perks">
-                <li>Quiet ambient noise level for focused reading</li>
-                <li>Easier parking options compared to downtown spots</li>
+            <ul class="perks-list">
+                <li>✓ Quiet ambient noise level for focused reading</li>
+                <li>✓ Easier parking options compared to downtown spots</li>
             </ul>
         </article>
     </main>
