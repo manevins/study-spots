@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Places to Study in Iowa City - Study Space IC</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
         :root {
-            --primary: #33272A;
-            --pink-main: #FF85A1;
-            --pink-soft: #FFE5EC;
-            --pink-light: #FFF0F5;
-            --lavender: #CDB4DB;
-            --lavender-soft: #F3E8F5;
-            --bg: #FFFAF8;
+            --homebody: #F49F51;
+            --tequila-sunrise: #FFD4E5;
+            --spring-water: #BEE4E7;
+            --tropical-breeze: #95C7C2;
+            --flamingo-pink: #F490B9;
+            --florence: #F7CCAD;
+
+            --primary-dark: #1F2937;
+            --text-main: #2C3E50;
             --card-bg: #FFFFFF;
-            --text-main: #4A3E3D;
-            --text-muted: #827175;
-            --border: #F7D6DF;
-            --radius-lg: 28px;
-            --radius-md: 18px;
-            --shadow-sm: 0 8px 24px rgba(255, 133, 161, 0.08);
-            --shadow-hover: 0 16px 36px rgba(255, 133, 161, 0.18);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.12);
         }
 
         * {
@@ -32,12 +31,13 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.7;
             color: var(--text-main);
-            background-color: var(--bg);
-            background-image: radial-gradient(var(--border) 1px, transparent 1px);
-            background-size: 24px 24px;
+            background-color: #FAF8F5;
+            background-image: radial-gradient(#95C7C2 1.5px, transparent 1.5px), radial-gradient(#F49F51 1.5px, #FAF8F5 1.5px);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -48,64 +48,64 @@
         }
 
         .disclaimer-banner {
-            background: linear-gradient(135deg, var(--pink-main), var(--lavender));
-            color: #FFFFFF;
+            background-color: var(--primary-dark);
+            color: var(--florence);
             text-align: center;
             padding: 12px 20px;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             font-weight: 700;
             letter-spacing: 0.02em;
-            box-shadow: 0 2px 10px rgba(255, 133, 161, 0.2);
+            border-bottom: 3px solid var(--homebody);
         }
 
         header {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(8px);
+            background-color: var(--card-bg);
             padding: 60px 20px 45px;
             text-align: center;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 2px solid var(--florence);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
 
         header .header-badge {
             display: inline-block;
-            background-color: var(--pink-soft);
-            color: var(--pink-main);
-            padding: 6px 18px;
+            background-color: var(--spring-water);
+            color: var(--primary-dark);
+            padding: 8px 22px;
             border-radius: 30px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
 
         header h1 {
-            background: linear-gradient(135deg, var(--pink-main) 0%, var(--lavender) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 4rem;
+            color: var(--primary-dark);
+            font-size: clamp(2.8rem, 6vw, 4.8rem);
             font-weight: 900;
             letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 12px;
+            line-height: 1.05;
+            margin-bottom: 14px;
+        }
+
+        header h1 span {
+            color: var(--homebody);
         }
 
         header p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 600px;
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            max-width: 700px;
             margin: 0 auto;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         nav {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background-color: var(--primary-dark);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         nav ul {
@@ -113,7 +113,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -130,137 +130,125 @@
 
         nav a {
             display: block;
-            padding: 18px 24px;
-            color: var(--text-muted);
+            padding: 18px 28px;
+            color: #FFFFFF;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-family: 'Outfit', sans-serif;
             letter-spacing: 0.02em;
-            transition: all 0.25s ease;
-            position: relative;
+            transition: all 0.2s ease;
         }
 
         nav a:hover, nav a.active {
-            color: var(--pink-main);
-            background-color: var(--pink-light);
-        }
-
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 20%;
-            right: 20%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--pink-main), var(--lavender));
-            border-radius: 4px;
+            color: var(--primary-dark);
+            background-color: var(--homebody);
         }
 
         main {
-            max-width: 960px;
+            max-width: 1200px;
             width: 100%;
-            margin: 45px auto;
+            margin: 40px auto;
             padding: 0 20px;
             flex: 1;
         }
 
         .intro {
-            background: linear-gradient(135deg, #FFFFFF 0%, var(--pink-light) 100%);
-            padding: 38px;
+            background-color: var(--card-bg);
+            padding: 40px;
             border-radius: var(--radius-lg);
-            border: 2px solid var(--border);
+            border: 3px solid var(--florence);
             margin-bottom: 35px;
             box-shadow: var(--shadow-sm);
         }
 
         .intro h2 {
-            font-size: 2rem;
+            font-size: clamp(2rem, 4vw, 2.6rem);
             font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 10px;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
             letter-spacing: -0.02em;
         }
 
         .intro p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
+            color: var(--primary-dark);
+            font-size: 1.15rem;
+            font-weight: 500;
         }
 
         .spot-card {
             background-color: var(--card-bg);
-            padding: 38px;
+            padding: 40px;
             border-radius: var(--radius-lg);
-            border: 2px solid var(--border);
-            margin-bottom: 28px;
+            border: 3px solid var(--spring-water);
+            margin-bottom: 30px;
             box-shadow: var(--shadow-sm);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.25s ease;
         }
 
         .spot-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-hover);
-            border-color: var(--pink-main);
+            border-color: var(--tropical-breeze);
         }
 
         .spot-card h2 {
-            color: var(--primary);
-            font-size: 1.7rem;
+            color: var(--primary-dark);
+            font-size: 1.9rem;
             font-weight: 800;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             letter-spacing: -0.01em;
         }
 
         .badge-container {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .badge {
             display: inline-block;
-            background-color: var(--bg);
-            color: var(--text-muted);
-            padding: 6px 18px;
+            background-color: #F3F4F6;
+            color: var(--primary-dark);
+            padding: 8px 18px;
             border-radius: 30px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 700;
             font-family: 'Outfit', sans-serif;
-            border: 1px solid var(--border);
         }
 
         .badge-highlight {
-            background-color: var(--pink-soft);
-            color: var(--pink-main);
-            border: 1px solid var(--pink-main);
+            background-color: var(--tequila-sunrise);
+            color: var(--primary-dark);
+            border: 1px solid var(--flamingo-pink);
         }
 
         .spot-card p {
-            color: var(--text-muted);
-            line-height: 1.7;
-            font-size: 1.02rem;
+            color: var(--primary-dark);
+            line-height: 1.8;
+            font-size: 1.08rem;
+            font-weight: 500;
         }
 
         footer {
-            background-color: #FFFFFF;
-            color: var(--text-muted);
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
             text-align: center;
             padding: 45px 20px;
             margin-top: 60px;
-            border-top: 2px solid var(--border);
         }
 
         footer p {
             margin-bottom: 12px;
-            font-size: 0.92rem;
+            font-size: 0.95rem;
         }
 
         .footer-notice {
-            color: var(--pink-main);
-            font-size: 0.88rem;
+            color: var(--florence);
+            font-size: 0.9rem;
             font-weight: 700;
-            max-width: 650px;
+            max-width: 700px;
             margin: 0 auto;
             line-height: 1.6;
         }
@@ -273,9 +261,9 @@
     </div>
 
     <header>
-        <span class="header-badge">Quiet Focus Spots</span>
-        <h1>Study Space IC</h1>
-        <p>Top Quiet Spots & Libraries in Iowa City 📚</p>
+        <span class="header-badge">Quiet Focus Spaces</span>
+        <h1>Study Space <span>IC</span></h1>
+        <p>Top Quiet Spots & Libraries in Iowa City</p>
     </header>
 
     <nav>
