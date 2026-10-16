@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hawkeye Haven Study Guide - Iowa City Study Spots</title>
+    <title>Study Space IC - Iowa City Study Spots</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
         :root {
-            --primary: #121212;
-            --accent: #FFCD00;
-            --accent-hover: #e5b800;
-            --bg: #FAFAFB;
+            --primary: #2D3748;
+            --accent-orange: #FF7E5F;
+            --accent-pink: #FEB47B;
+            --accent-green: #6B9080;
+            --accent-green-light: #E8F1EE;
+            --bg: #FAF9F6;
             --card-bg: #FFFFFF;
-            --text-main: #1E293B;
-            --text-muted: #64748B;
+            --text-main: #2D3748;
+            --text-muted: #718096;
             --border: #E2E8F0;
-            --radius-lg: 16px;
-            --radius-md: 10px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.06);
-            --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.01);
-            --shadow-hover: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.04);
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --shadow-sm: 0 4px 12px rgba(0,0,0,0.03);
+            --shadow-hover: 0 12px 24px rgba(255,126,95,0.12);
         }
 
         * {
@@ -40,27 +41,27 @@
         }
 
         .disclaimer-banner {
-            background: linear-gradient(90deg, #000000 0%, #1a1a1a 100%);
-            color: var(--accent);
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
+            color: #FFFFFF;
             text-align: center;
             padding: 12px 20px;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 0.02em;
-            border-bottom: 2px solid var(--accent);
         }
 
         header {
-            background-color: #000000;
-            color: #FFFFFF;
-            padding: 40px 20px 30px;
+            background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
+            padding: 45px 20px 35px;
             text-align: center;
-            background-image: radial-gradient(circle at top, #222222 0%, #000000 70%);
+            border-bottom: 1px solid var(--border);
         }
 
         header h1 {
-            color: var(--accent);
-            font-size: 2.4rem;
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.6rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             margin-bottom: 8px;
@@ -68,18 +69,18 @@
 
         header p {
             font-size: 1.05rem;
-            color: #94A3B8;
+            color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
         }
 
         nav {
-            background-color: #121212;
+            background-color: #FFFFFF;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
 
         nav ul {
@@ -105,7 +106,7 @@
         nav a {
             display: block;
             padding: 16px 22px;
-            color: #CBD5E1;
+            color: var(--text-muted);
             text-decoration: none;
             font-weight: 600;
             font-size: 0.92rem;
@@ -114,8 +115,8 @@
         }
 
         nav a:hover, nav a.active {
-            color: var(--accent);
-            background-color: rgba(255, 205, 0, 0.05);
+            color: var(--accent-orange);
+            background-color: #FFF5F2;
         }
 
         nav a.active::after {
@@ -125,7 +126,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background-color: var(--accent);
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-pink));
         }
 
         main {
@@ -137,17 +138,17 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-            padding: 35px;
+            background: linear-gradient(135deg, #FFF9F5 0%, #F4F8F6 100%);
+            padding: 40px;
             border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
+            border: 1px solid #F1E5DF;
             margin-bottom: 30px;
             box-shadow: var(--shadow-sm);
         }
 
         .hero h2 {
-            font-size: 1.6rem;
-            font-weight: 700;
+            font-size: 1.7rem;
+            font-weight: 800;
             margin-bottom: 12px;
             color: var(--primary);
         }
@@ -173,11 +174,11 @@
 
         .card {
             background-color: var(--card-bg);
-            padding: 30px;
+            padding: 32px;
             border-radius: var(--radius-lg);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -186,6 +187,7 @@
         .card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-hover);
+            border-color: #FFDAC1;
         }
 
         .card h3 {
@@ -196,7 +198,7 @@
 
         .card p {
             color: var(--text-muted);
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .team-section {
@@ -231,16 +233,16 @@
         }
 
         .team-member {
-            background-color: var(--bg);
-            padding: 20px;
+            background-color: var(--accent-green-light);
+            padding: 22px;
             border-radius: var(--radius-md);
-            border: 1px solid var(--border);
+            border: 1px solid #D8E6E0;
         }
 
         .team-member h3 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 6px;
+            font-size: 1.15rem;
+            color: var(--accent-green);
+            margin-bottom: 4px;
         }
 
         .team-member p {
@@ -252,29 +254,30 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
             color: #FFFFFF;
-            padding: 12px 20px;
+            padding: 12px 24px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: var(--radius-md);
             font-size: 0.92rem;
-            transition: all 0.2s ease;
+            transition: opacity 0.2s ease, transform 0.2s ease;
             align-self: flex-start;
+            box-shadow: 0 4px 10px rgba(255,126,95,0.25);
         }
 
         .btn:hover {
-            background-color: var(--accent);
-            color: var(--primary);
+            opacity: 0.95;
+            transform: translateY(-1px);
         }
 
         footer {
-            background-color: #000000;
-            color: #94A3B8;
+            background-color: #FFFFFF;
+            color: var(--text-muted);
             text-align: center;
             padding: 35px 20px;
             margin-top: 50px;
-            border-top: 1px solid #222;
+            border-top: 1px solid var(--border);
         }
 
         footer p {
@@ -283,7 +286,7 @@
         }
 
         .footer-notice {
-            color: var(--accent);
+            color: var(--accent-orange);
             font-size: 0.85rem;
             font-weight: 600;
             max-width: 650px;
@@ -299,7 +302,7 @@
     </div>
 
     <header>
-        <h1>Hawkeye Haven Study Guide</h1>
+        <h1>Study Space IC</h1>
         <p>Your Ultimate Guide to Workspaces and Coffee Shops in Iowa City</p>
     </header>
 
@@ -314,7 +317,7 @@
 
     <main>
         <section class="hero">
-            <h2>Welcome to Hawkeye Haven</h2>
+            <h2>Welcome to Study Space IC</h2>
             <p>Finding a productive study spot in Iowa City can make all the difference during midterms and finals. Whether you need absolute silence, a caffeinated workplace, or a scenic outdoor table on campus, our guide helps students, freelancers, and local residents find their ideal location.</p>
         </section>
 
@@ -337,7 +340,7 @@
 
         <section class="team-section">
             <h2>About Our Project Team</h2>
-            <p>Hawkeye Haven was launched by a team of University of Iowa undergraduate business students analyzing digital marketing strategy and local search patterns.</p>
+            <p>Study Space IC was launched by a team of University of Iowa undergraduate business students analyzing digital marketing strategy and local search patterns.</p>
             
             <div class="team-grid">
                 <div class="team-member">
@@ -356,7 +359,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Hawkeye Haven Study Guide.</p>
+        <p>&copy; 2026 Study Space IC.</p>
         <p class="footer-notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
     </footer>
 
