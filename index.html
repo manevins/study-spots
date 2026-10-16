@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Space IC - Iowa City Study Spots</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
         :root {
             --primary: #2D3748;
@@ -18,10 +18,10 @@
             --text-main: #2D3748;
             --text-muted: #718096;
             --border: #E2E8F0;
-            --radius-lg: 20px;
-            --radius-md: 12px;
+            --radius-lg: 24px;
+            --radius-md: 14px;
             --shadow-sm: 0 4px 12px rgba(0,0,0,0.03);
-            --shadow-hover: 0 12px 24px rgba(255,126,95,0.12);
+            --shadow-hover: 0 16px 32px rgba(255,126,95,0.15);
         }
 
         * {
@@ -40,19 +40,23 @@
             min-height: 100vh;
         }
 
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+
         .disclaimer-banner {
             background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
             color: #FFFFFF;
             text-align: center;
             padding: 12px 20px;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 700;
             letter-spacing: 0.02em;
         }
 
         header {
             background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
-            padding: 45px 20px 35px;
+            padding: 55px 20px 40px;
             text-align: center;
             border-bottom: 1px solid var(--border);
         }
@@ -61,17 +65,19 @@
             background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 2.6rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
+            font-size: 3.8rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 12px;
         }
 
         header p {
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
+            font-weight: 500;
         }
 
         nav {
@@ -80,7 +86,7 @@
             top: 0;
             z-index: 100;
             border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
 
         nav ul {
@@ -105,11 +111,13 @@
 
         nav a {
             display: block;
-            padding: 16px 22px;
+            padding: 18px 24px;
             color: var(--text-muted);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.92rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: 0.02em;
             transition: all 0.2s ease;
             position: relative;
         }
@@ -125,37 +133,39 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 3px;
+            height: 4px;
             background: linear-gradient(90deg, var(--accent-orange), var(--accent-pink));
+            border-radius: 4px 4px 0 0;
         }
 
         main {
             max-width: 960px;
             width: 100%;
-            margin: 35px auto;
+            margin: 40px auto;
             padding: 0 20px;
             flex: 1;
         }
 
         .hero {
             background: linear-gradient(135deg, #FFF9F5 0%, #F4F8F6 100%);
-            padding: 40px;
+            padding: 45px;
             border-radius: var(--radius-lg);
-            border: 1px solid #F1E5DF;
-            margin-bottom: 30px;
+            border: 2px solid #F1E5DF;
+            margin-bottom: 35px;
             box-shadow: var(--shadow-sm);
         }
 
         .hero h2 {
-            font-size: 1.7rem;
+            font-size: 2.2rem;
             font-weight: 800;
             margin-bottom: 12px;
             color: var(--primary);
+            letter-spacing: -0.02em;
         }
 
         .hero p {
             color: var(--text-muted);
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             line-height: 1.7;
         }
 
@@ -163,7 +173,7 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 24px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         @media (min-width: 650px) {
@@ -174,7 +184,7 @@
 
         .card {
             background-color: var(--card-bg);
-            padding: 32px;
+            padding: 35px;
             border-radius: var(--radius-lg);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
@@ -185,39 +195,45 @@
         }
 
         .card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
             border-color: #FFDAC1;
         }
 
         .card h3 {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
+            font-weight: 800;
             margin-bottom: 12px;
             color: var(--primary);
+            letter-spacing: -0.01em;
         }
 
         .card p {
             color: var(--text-muted);
             margin-bottom: 24px;
+            font-size: 1rem;
         }
 
         .team-section {
             background-color: var(--card-bg);
-            padding: 35px;
+            padding: 40px;
             border-radius: var(--radius-lg);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
         }
 
         .team-section h2 {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            font-weight: 800;
             margin-bottom: 8px;
             color: var(--primary);
+            letter-spacing: -0.02em;
         }
 
         .team-section > p {
             color: var(--text-muted);
-            margin-bottom: 25px;
+            margin-bottom: 28px;
+            font-size: 1.05rem;
         }
 
         .team-grid {
@@ -234,20 +250,21 @@
 
         .team-member {
             background-color: var(--accent-green-light);
-            padding: 22px;
+            padding: 24px;
             border-radius: var(--radius-md);
             border: 1px solid #D8E6E0;
         }
 
         .team-member h3 {
-            font-size: 1.15rem;
+            font-size: 1.35rem;
+            font-weight: 700;
             color: var(--accent-green);
             margin-bottom: 4px;
         }
 
         .team-member p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.98rem;
         }
 
         .btn {
@@ -256,38 +273,40 @@
             justify-content: center;
             background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
             color: #FFFFFF;
-            padding: 12px 24px;
+            padding: 14px 28px;
             text-decoration: none;
-            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
             border-radius: var(--radius-md);
-            font-size: 0.92rem;
             transition: opacity 0.2s ease, transform 0.2s ease;
             align-self: flex-start;
-            box-shadow: 0 4px 10px rgba(255,126,95,0.25);
+            box-shadow: 0 4px 12px rgba(255,126,95,0.3);
         }
 
         .btn:hover {
             opacity: 0.95;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
         }
 
         footer {
             background-color: #FFFFFF;
             color: var(--text-muted);
             text-align: center;
-            padding: 35px 20px;
-            margin-top: 50px;
+            padding: 40px 20px;
+            margin-top: 60px;
             border-top: 1px solid var(--border);
         }
 
         footer p {
             margin-bottom: 12px;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
         }
 
         .footer-notice {
             color: var(--accent-orange);
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 600;
             max-width: 650px;
             margin: 0 auto;
