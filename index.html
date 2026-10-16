@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Space IC - Iowa City Study Spots</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
         :root {
-            --primary: #33272A;
-            --pink-main: #FF85A1;
-            --pink-soft: #FFE5EC;
-            --pink-light: #FFF0F5;
-            --lavender: #CDB4DB;
-            --lavender-soft: #F3E8F5;
-            --bg: #FFFAF8;
+            /* Palette Swatch Colors */
+            --homebody: #F49F51;
+            --tequila-sunrise: #FFD4E5;
+            --spring-water: #BEE4E7;
+            --tropical-breeze: #95C7C2;
+            --flamingo-pink: #F490B9;
+            --florence: #F7CCAD;
+
+            --primary-dark: #1F2937;
+            --text-main: #2C3E50;
             --card-bg: #FFFFFF;
-            --text-main: #4A3E3D;
-            --text-muted: #827175;
-            --border: #F7D6DF;
-            --radius-lg: 28px;
-            --radius-md: 18px;
-            --shadow-sm: 0 8px 24px rgba(255, 133, 161, 0.08);
-            --shadow-hover: 0 16px 36px rgba(255, 133, 161, 0.18);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.12);
         }
 
         * {
@@ -32,12 +32,14 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.7;
             color: var(--text-main);
-            background-color: var(--bg);
-            background-image: radial-gradient(var(--border) 1px, transparent 1px);
-            background-size: 24px 24px;
+            background-color: #FAF8F5;
+            /* SVG Polka Dot Pattern */
+            background-image: radial-gradient(#95C7C2 1.5px, transparent 1.5px), radial-gradient(#F49F51 1.5px, #FAF8F5 1.5px);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -48,64 +50,64 @@
         }
 
         .disclaimer-banner {
-            background: linear-gradient(135deg, var(--pink-main), var(--lavender));
-            color: #FFFFFF;
+            background-color: var(--primary-dark);
+            color: var(--florence);
             text-align: center;
             padding: 12px 20px;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             font-weight: 700;
             letter-spacing: 0.02em;
-            box-shadow: 0 2px 10px rgba(255, 133, 161, 0.2);
+            border-bottom: 3px solid var(--homebody);
         }
 
         header {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(8px);
+            background-color: var(--card-bg);
             padding: 60px 20px 45px;
             text-align: center;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 2px solid var(--florence);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
 
         header .header-badge {
             display: inline-block;
-            background-color: var(--pink-soft);
-            color: var(--pink-main);
-            padding: 6px 18px;
+            background-color: var(--spring-water);
+            color: var(--primary-dark);
+            padding: 8px 22px;
             border-radius: 30px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
 
         header h1 {
-            background: linear-gradient(135deg, var(--pink-main) 0%, var(--lavender) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 4rem;
+            color: var(--primary-dark);
+            font-size: clamp(2.8rem, 6vw, 4.8rem);
             font-weight: 900;
             letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 12px;
+            line-height: 1.05;
+            margin-bottom: 14px;
+        }
+
+        header h1 span {
+            color: var(--homebody);
         }
 
         header p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 600px;
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            max-width: 700px;
             margin: 0 auto;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         nav {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background-color: var(--primary-dark);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         nav ul {
@@ -113,7 +115,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -130,83 +132,61 @@
 
         nav a {
             display: block;
-            padding: 18px 24px;
-            color: var(--text-muted);
+            padding: 18px 28px;
+            color: #FFFFFF;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-family: 'Outfit', sans-serif;
             letter-spacing: 0.02em;
-            transition: all 0.25 ease;
-            position: relative;
+            transition: all 0.2s ease;
         }
 
         nav a:hover, nav a.active {
-            color: var(--pink-main);
-            background-color: var(--pink-light);
-        }
-
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 20%;
-            right: 20%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--pink-main), var(--lavender));
-            border-radius: 4px;
+            color: var(--primary-dark);
+            background-color: var(--homebody);
         }
 
         main {
-            max-width: 960px;
+            max-width: 1200px;
             width: 100%;
-            margin: 45px auto;
+            margin: 40px auto;
             padding: 0 20px;
             flex: 1;
         }
 
         .hero {
-            background: linear-gradient(135deg, #FFFFFF 0%, var(--pink-light) 100%);
-            padding: 45px;
+            background-color: var(--card-bg);
+            padding: 50px;
             border-radius: var(--radius-lg);
-            border: 2px solid var(--border);
+            border: 3px solid var(--florence);
             margin-bottom: 35px;
             box-shadow: var(--shadow-sm);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::after {
-            content: '✨';
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            font-size: 1.8rem;
-            opacity: 0.8;
         }
 
         .hero h2 {
-            font-size: 2.2rem;
+            font-size: clamp(2rem, 4vw, 2.8rem);
             font-weight: 800;
-            margin-bottom: 12px;
-            color: var(--primary);
+            margin-bottom: 16px;
+            color: var(--primary-dark);
             letter-spacing: -0.02em;
         }
 
         .hero p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
+            color: var(--primary-dark);
+            font-size: 1.15rem;
             line-height: 1.8;
+            font-weight: 500;
         }
 
         .grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: 30px;
             margin-bottom: 35px;
         }
 
-        @media (min-width: 650px) {
+        @media (min-width: 768px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -214,11 +194,11 @@
 
         .card {
             background-color: var(--card-bg);
-            padding: 38px;
+            padding: 40px;
             border-radius: var(--radius-lg);
-            border: 2px solid var(--border);
+            border: 3px solid var(--spring-water);
             box-shadow: var(--shadow-sm);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.25s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -226,192 +206,4 @@
 
         .card:hover {
             transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--pink-main);
-        }
-
-        .card h3 {
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-            color: var(--primary);
-            letter-spacing: -0.01em;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            margin-bottom: 26px;
-            font-size: 1rem;
-        }
-
-        .team-section {
-            background-color: var(--card-bg);
-            padding: 42px;
-            border-radius: var(--radius-lg);
-            border: 2px solid var(--border);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .team-section h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 8px;
-            color: var(--primary);
-            letter-spacing: -0.02em;
-        }
-
-        .team-section > p {
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            font-size: 1.05rem;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        @media (min-width: 650px) {
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .team-member {
-            background-color: var(--pink-soft);
-            padding: 26px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border);
-        }
-
-        .team-member h3 {
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--pink-main);
-            margin-bottom: 4px;
-        }
-
-        .team-member p {
-            color: var(--text-muted);
-            font-size: 0.98rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--pink-main), var(--lavender));
-            color: #FFFFFF;
-            padding: 14px 28px;
-            text-decoration: none;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 800;
-            font-size: 1rem;
-            letter-spacing: 0.02em;
-            border-radius: 30px;
-            transition: all 0.25s ease;
-            align-self: flex-start;
-            box-shadow: 0 6px 18px rgba(255, 133, 161, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(255, 133, 161, 0.4);
-        }
-
-        footer {
-            background-color: #FFFFFF;
-            color: var(--text-muted);
-            text-align: center;
-            padding: 45px 20px;
-            margin-top: 60px;
-            border-top: 2px solid var(--border);
-        }
-
-        footer p {
-            margin-bottom: 12px;
-            font-size: 0.92rem;
-        }
-
-        .footer-notice {
-            color: var(--pink-main);
-            font-size: 0.88rem;
-            font-weight: 700;
-            max-width: 650px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="disclaimer-banner">
-        This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
-    </div>
-
-    <header>
-        <span class="header-badge">Iowa City Guide</span>
-        <h1>Study Space IC</h1>
-        <p>Your Cute & Cozy Guide to Workspaces and Coffee Shops in Iowa City 🎀</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="best-places-to-study-in-iowa-city.html">Best Places to Study</a></li>
-            <li><a href="best-coffee-shops-to-study-in-iowa-city.html">Best Coffee Shops</a></li>
-            <li><a href="study-spots-in-iowa-city.html">All Study Spots</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section class="hero">
-            <h2>Welcome to Study Space IC</h2>
-            <p>Finding a productive study spot in Iowa City can make all the difference during midterms and finals. Whether you need absolute silence, a caffeinated workplace, or a scenic outdoor table on campus, our guide helps students, freelancers, and local residents find their ideal location.</p>
-        </section>
-
-        <section class="grid">
-            <div class="card">
-                <div>
-                    <h3>Campus Libraries & Quiet Zones</h3>
-                    <p>Discover high-productivity venues across the University of Iowa campus, complete with power outlets, fast Wi-Fi, and expansive desk spaces.</p>
-                </div>
-                <a href="best-places-to-study-in-iowa-city.html" class="btn">Explore Best Places &rarr;</a>
-            </div>
-            <div class="card">
-                <div>
-                    <h3>Coffee Shops & Cafes</h3>
-                    <p>Fuel your study sessions with top-tier lattes and cozy atmospheres downtown and around the Northside neighborhood.</p>
-                </div>
-                <a href="best-coffee-shops-to-study-in-iowa-city.html" class="btn">Explore Coffee Shops &rarr;</a>
-            </div>
-        </section>
-
-        <section class="team-section">
-            <h2>About Our Project Team</h2>
-            <p>Study Space IC was launched by a team of University of Iowa undergraduate business students analyzing digital marketing strategy and local search patterns.</p>
-            
-            <div class="team-grid">
-                <div class="team-member">
-                    <h3>Elena Rostova</h3>
-                    <p><strong>Lead Content Editor</strong></p>
-                    <p style="margin-top: 6px;">Elena is a senior majoring in Marketing at the Tippie College of Business. She spent three years testing every coffee shop in downtown Iowa City to find the ultimate study tables.</p>
-                </div>
-
-                <div class="team-member">
-                    <h3>Marcus Vance</h3>
-                    <p><strong>Technical & Web Specialist</strong></p>
-                    <p style="margin-top: 6px;">Marcus is a junior studying Business Analytics. He built this light, fast-loading platform to help students filter through top study destinations efficiently.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Study Space IC.</p>
-        <p class="footer-notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
-    </footer>
-
-</body>
-</html>
+            box-shadow: var
