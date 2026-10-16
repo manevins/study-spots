@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawkeye Haven Study Guide - Iowa City Study Spots</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --accent: #FFCD00;
+            --bg: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --text: #212529;
+            --border: #DEE2E6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .disclaimer-banner {
+            background-color: var(--primary);
+            color: var(--accent);
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            color: #E0E0E0;
+        }
+
+        nav {
+            background-color: #1A1A1A;
+            border-top: 1px solid #333333;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav li {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (min-width: 600px) {
+            nav li {
+                width: auto;
+            }
+        }
+
+        nav a {
+            display: block;
+            padding: 12px 18px;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+            flex: 1;
+        }
+
+        .hero {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .hero h2 {
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        @media (min-width: 650px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 5px;
+        }
+
+        .team-section {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-bottom: 25px;
+        }
+
+        .team-member {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .team-member:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--accent);
+            padding: 10px 16px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: #333333;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer-notice {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="disclaimer-banner">
+        This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+    </div>
+
+    <header>
+        <h1>Hawkeye Haven Study Guide</h1>
+        <p>Your Ultimate Guide to Workspaces and Coffee Shops in Iowa City</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="best-places-to-study-in-iowa-city.html">Best Places to Study</a></li>
+            <li><a href="best-coffee-shops-to-study-in-iowa-city.html">Best Coffee Shops</a></li>
+            <li><a href="study-spots-in-iowa-city.html">All Study Spots</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to Hawkeye Haven</h2>
+            <p>Finding a productive study spot in Iowa City can make all the difference during midterms and finals. Whether you need absolute silence, a caffeinated workplace, or a scenic outdoor table on campus, our guide helps students, freelancers, and local residents find their ideal location.</p>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <h3>Campus Libraries & Quiet Zones</h3>
+                <p>Discover high-productivity venues across the University of Iowa campus, complete with power outlets, fast Wi-Fi, and expansive desk spaces.</p>
+                <a href="best-places-to-study-in-iowa-city.html" class="btn">Explore Best Places</a>
+            </div>
+            <div class="card">
+                <h3>Coffee Shops & Cafes</h3>
+                <p>Fuel your study sessions with top-tier lattes and cozy atmospheres downtown and around the Northside neighborhood.</p>
+                <a href="best-coffee-shops-to-study-in-iowa-city.html" class="btn">Explore Coffee Shops</a>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>About Our Project Team</h2>
+            <p>Hawkeye Haven was launched by a team of University of Iowa undergraduate business students analyzing digital marketing strategy and local search patterns.</p>
+            
+            <div class="team-member">
+                <h3>Elena Rostova - Lead Content Editor</h3>
+                <p>Elena is a senior majoring in Marketing at the Tippie College of Business. She spent three years testing every coffee shop in downtown Iowa City to find the ultimate study tables.</p>
+            </div>
+
+            <div class="team-member">
+                <h3>Marcus Vance - Technical & Web Specialist</h3>
+                <p>Marcus is a junior studying Business Analytics. He built this light, fast-loading platform to help students filter through top study destinations efficiently.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hawkeye Haven Study Guide.</p>
+        <p class="footer-notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
+    </footer>
+
+</body>
+</html>
