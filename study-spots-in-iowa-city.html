@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Spots in Iowa City - Hawkeye Haven Directory</title>
+    <title>Study Spots in Iowa City - Study Space IC Directory</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
         :root {
-            --primary: #121212;
-            --accent: #FFCD00;
-            --bg: #FAFAFB;
+            --primary: #2D3748;
+            --accent-orange: #FF7E5F;
+            --accent-pink: #FEB47B;
+            --accent-green: #6B9080;
+            --bg: #FAF9F6;
             --card-bg: #FFFFFF;
-            --text-main: #1E293B;
-            --text-muted: #64748B;
+            --text-main: #2D3748;
+            --text-muted: #718096;
             --border: #E2E8F0;
-            --radius-lg: 16px;
-            --radius-md: 10px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.06);
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --shadow-sm: 0 4px 12px rgba(0,0,0,0.03);
         }
 
         * {
@@ -37,27 +39,27 @@
         }
 
         .disclaimer-banner {
-            background: linear-gradient(90deg, #000000 0%, #1a1a1a 100%);
-            color: var(--accent);
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
+            color: #FFFFFF;
             text-align: center;
             padding: 12px 20px;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 0.02em;
-            border-bottom: 2px solid var(--accent);
         }
 
         header {
-            background-color: #000000;
-            color: #FFFFFF;
-            padding: 40px 20px 30px;
+            background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
+            padding: 45px 20px 35px;
             text-align: center;
-            background-image: radial-gradient(circle at top, #222222 0%, #000000 70%);
+            border-bottom: 1px solid var(--border);
         }
 
         header h1 {
-            color: var(--accent);
-            font-size: 2.4rem;
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.6rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             margin-bottom: 8px;
@@ -65,18 +67,18 @@
 
         header p {
             font-size: 1.05rem;
-            color: #94A3B8;
+            color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
         }
 
         nav {
-            background-color: #121212;
+            background-color: #FFFFFF;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
 
         nav ul {
@@ -102,7 +104,7 @@
         nav a {
             display: block;
             padding: 16px 22px;
-            color: #CBD5E1;
+            color: var(--text-muted);
             text-decoration: none;
             font-weight: 600;
             font-size: 0.92rem;
@@ -111,8 +113,8 @@
         }
 
         nav a:hover, nav a.active {
-            color: var(--accent);
-            background-color: rgba(255, 205, 0, 0.05);
+            color: var(--accent-orange);
+            background-color: #FFF5F2;
         }
 
         nav a.active::after {
@@ -122,7 +124,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background-color: var(--accent);
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-pink));
         }
 
         main {
@@ -134,10 +136,10 @@
         }
 
         .intro {
-            background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+            background: linear-gradient(135deg, #FFF9F5 0%, #F4F8F6 100%);
             padding: 30px;
             border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
+            border: 1px solid #F1E5DF;
             margin-bottom: 30px;
             box-shadow: var(--shadow-sm);
         }
@@ -176,10 +178,10 @@
         }
 
         th {
-            background-color: #18181B;
-            color: var(--accent);
+            background-color: #E8F1EE;
+            color: var(--accent-green);
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
@@ -189,12 +191,12 @@
         }
 
         tr:nth-child(even) {
-            background-color: #F8FAFC;
+            background-color: #FAFBFB;
         }
 
         .tips-section {
             background-color: var(--card-bg);
-            padding: 30px;
+            padding: 32px;
             border-radius: var(--radius-lg);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
@@ -212,7 +214,7 @@
 
         .tips-section li {
             margin-bottom: 12px;
-            padding-left: 24px;
+            padding-left: 28px;
             position: relative;
             color: var(--text-muted);
         }
@@ -225,12 +227,12 @@
         }
 
         footer {
-            background-color: #000000;
-            color: #94A3B8;
+            background-color: #FFFFFF;
+            color: var(--text-muted);
             text-align: center;
             padding: 35px 20px;
             margin-top: 50px;
-            border-top: 1px solid #222;
+            border-top: 1px solid var(--border);
         }
 
         footer p {
@@ -239,7 +241,7 @@
         }
 
         .footer-notice {
-            color: var(--accent);
+            color: var(--accent-orange);
             font-size: 0.85rem;
             font-weight: 600;
             max-width: 650px;
@@ -255,7 +257,7 @@
     </div>
 
     <header>
-        <h1>Hawkeye Haven Study Guide</h1>
+        <h1>Study Space IC</h1>
         <p>Complete Directory of Study Spots in Iowa City</p>
     </header>
 
@@ -336,7 +338,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Hawkeye Haven Study Guide.</p>
+        <p>&copy; 2026 Study Space IC.</p>
         <p class="footer-notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
     </footer>
 
