@@ -206,4 +206,195 @@
 
         .card:hover {
             transform: translateY(-6px);
-            box-shadow: var
+            box-shadow: var(--shadow-hover);
+            border-color: var(--tropical-breeze);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+            color: var(--primary-dark);
+            letter-spacing: -0.01em;
+        }
+
+        .card p {
+            color: var(--primary-dark);
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .team-section {
+            background-color: var(--card-bg);
+            padding: 45px;
+            border-radius: var(--radius-lg);
+            border: 3px solid var(--florence);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .team-section h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+            letter-spacing: -0.02em;
+        }
+
+        .team-section > p {
+            color: var(--primary-dark);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .team-member {
+            background-color: var(--tequila-sunrise);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--flamingo-pink);
+        }
+
+        .team-member h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+        }
+
+        .team-member p {
+            color: var(--primary-dark);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--homebody);
+            color: var(--primary-dark);
+            padding: 16px 32px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: 0.02em;
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease;
+            align-self: flex-start;
+            box-shadow: 0 4px 12px rgba(244, 159, 81, 0.4);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            color: var(--homebody);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 45px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .footer-notice {
+            color: var(--florence);
+            font-size: 0.9rem;
+            font-weight: 700;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="disclaimer-banner">
+        This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+    </div>
+
+    <header>
+        <span class="header-badge">Iowa City Workspace Directory</span>
+        <h1>Study Space <span>IC</span></h1>
+        <p>Your Colorful & Fresh Guide to the Best Workspaces and Coffee Shops around Iowa City</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="best-places-to-study-in-iowa-city.html">Best Places to Study</a></li>
+            <li><a href="best-coffee-shops-to-study-in-iowa-city.html">Best Coffee Shops</a></li>
+            <li><a href="study-spots-in-iowa-city.html">All Study Spots</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to Study Space IC</h2>
+            <p>Finding a productive study spot in Iowa City can make all the difference during midterms and finals. Whether you need absolute silence, a caffeinated workplace, or a scenic outdoor table on campus, our guide helps students, freelancers, and local residents find their ideal location.</p>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <div>
+                    <h3>Campus Libraries & Quiet Zones</h3>
+                    <p>Discover high-productivity venues across the University of Iowa campus, complete with power outlets, fast Wi-Fi, and expansive desk spaces.</p>
+                </div>
+                <a href="best-places-to-study-in-iowa-city.html" class="btn">Explore Best Places &rarr;</a>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Coffee Shops & Cafes</h3>
+                    <p>Fuel your study sessions with top-tier lattes and cozy atmospheres downtown and around the Northside neighborhood.</p>
+                </div>
+                <a href="best-coffee-shops-to-study-in-iowa-city.html" class="btn">Explore Coffee Shops &rarr;</a>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>About Our Project Team</h2>
+            <p>Study Space IC was launched by a team of University of Iowa undergraduate business students analyzing digital marketing strategy and local search patterns.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Elena Rostova</h3>
+                    <p><strong>Lead Content Editor</strong></p>
+                    <p style="margin-top: 8px;">Elena is a senior majoring in Marketing at the Tippie College of Business. She spent three years testing every coffee shop in downtown Iowa City to find the ultimate study tables.</p>
+                </div>
+
+                <div class="team-member">
+                    <h3>Marcus Vance</h3>
+                    <p><strong>Technical & Web Specialist</strong></p>
+                    <p style="margin-top: 8px;">Marcus is a junior studying Business Analytics. He built this light, fast-loading platform to help students filter through top study destinations efficiently.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Study Space IC.</p>
+        <p class="footer-notice">This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.</p>
+    </footer>
+
+</body>
+</html>
