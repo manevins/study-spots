@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Spots in Iowa City - Study Space IC Directory</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
         :root {
             --primary: #2D3748;
@@ -17,8 +17,8 @@
             --text-main: #2D3748;
             --text-muted: #718096;
             --border: #E2E8F0;
-            --radius-lg: 20px;
-            --radius-md: 12px;
+            --radius-lg: 24px;
+            --radius-md: 14px;
             --shadow-sm: 0 4px 12px rgba(0,0,0,0.03);
         }
 
@@ -38,19 +38,23 @@
             min-height: 100vh;
         }
 
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+
         .disclaimer-banner {
             background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
             color: #FFFFFF;
             text-align: center;
             padding: 12px 20px;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 700;
             letter-spacing: 0.02em;
         }
 
         header {
             background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
-            padding: 45px 20px 35px;
+            padding: 55px 20px 40px;
             text-align: center;
             border-bottom: 1px solid var(--border);
         }
@@ -59,17 +63,19 @@
             background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 2.6rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
+            font-size: 3.8rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 12px;
         }
 
         header p {
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
+            font-weight: 500;
         }
 
         nav {
@@ -78,7 +84,7 @@
             top: 0;
             z-index: 100;
             border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
 
         nav ul {
@@ -103,11 +109,13 @@
 
         nav a {
             display: block;
-            padding: 16px 22px;
+            padding: 18px 24px;
             color: var(--text-muted);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.92rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: 0.02em;
             transition: all 0.2s ease;
             position: relative;
         }
@@ -123,36 +131,39 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 3px;
+            height: 4px;
             background: linear-gradient(90deg, var(--accent-orange), var(--accent-pink));
+            border-radius: 4px 4px 0 0;
         }
 
         main {
             max-width: 960px;
             width: 100%;
-            margin: 35px auto;
+            margin: 40px auto;
             padding: 0 20px;
             flex: 1;
         }
 
         .intro {
             background: linear-gradient(135deg, #FFF9F5 0%, #F4F8F6 100%);
-            padding: 30px;
+            padding: 35px;
             border-radius: var(--radius-lg);
-            border: 1px solid #F1E5DF;
-            margin-bottom: 30px;
+            border: 2px solid #F1E5DF;
+            margin-bottom: 35px;
             box-shadow: var(--shadow-sm);
         }
 
         .intro h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: 2rem;
+            font-weight: 800;
             color: var(--primary);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
         }
 
         .intro p {
             color: var(--text-muted);
+            font-size: 1.05rem;
         }
 
         .table-responsive {
@@ -162,7 +173,7 @@
             border-radius: var(--radius-lg);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         table {
@@ -173,15 +184,16 @@
         }
 
         th, td {
-            padding: 16px 20px;
+            padding: 18px 22px;
             border-bottom: 1px solid var(--border);
         }
 
         th {
             background-color: #E8F1EE;
             color: var(--accent-green);
-            font-weight: 700;
-            font-size: 0.88rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
@@ -196,7 +208,7 @@
 
         .tips-section {
             background-color: var(--card-bg);
-            padding: 32px;
+            padding: 35px;
             border-radius: var(--radius-lg);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
@@ -204,8 +216,10 @@
 
         .tips-section h2 {
             color: var(--primary);
-            font-size: 1.35rem;
-            margin-bottom: 16px;
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+            letter-spacing: -0.01em;
         }
 
         .tips-section ul {
@@ -213,10 +227,11 @@
         }
 
         .tips-section li {
-            margin-bottom: 12px;
-            padding-left: 28px;
+            margin-bottom: 14px;
+            padding-left: 30px;
             position: relative;
             color: var(--text-muted);
+            font-size: 1.02rem;
         }
 
         .tips-section li::before {
@@ -230,19 +245,19 @@
             background-color: #FFFFFF;
             color: var(--text-muted);
             text-align: center;
-            padding: 35px 20px;
-            margin-top: 50px;
+            padding: 40px 20px;
+            margin-top: 60px;
             border-top: 1px solid var(--border);
         }
 
         footer p {
             margin-bottom: 12px;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
         }
 
         .footer-notice {
             color: var(--accent-orange);
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 600;
             max-width: 650px;
             margin: 0 auto;
