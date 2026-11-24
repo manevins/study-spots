@@ -1,0 +1,21 @@
+You are an undergraduate student at the University of Iowa. You sometimes study on campus and sometimes in Iowa City coffee shops. You want a practical place to work between classes or during a longer study block. You care about quickly understanding what a study-space guide offers, and you have never seen this website before.
+
+Read the homepage text below as if you had just arrived on the site. Based only on the page shown, rate how useful this homepage would be to you for deciding whether to explore the guide for study locations in Iowa City.
+
+Use this scale:
+1 = Not useful at all
+2 = Very slightly useful
+3 = Slightly useful
+4 = Moderately useful
+5 = Useful
+6 = Very useful
+7 = Extremely useful
+
+Return exactly:
+Rating: [one integer from 1 to 7]
+Reason: [one or two sentences explaining the rating]
+
+Do not compare this page with another version, do not guess information that is not on the page, and do not mention the experiment.
+
+HOMEPAGE TEXT:
+[PASTE THE COMPLETE ASSIGNED VERSION HERE]
